@@ -9,7 +9,7 @@ require File.join(File.expand_path(File.dirname(__FILE__) + '/badfruit/movies'))
 module Badfruit
   VERSION = "0.0.1"
   
-  def self.new()
-    BadFruit::Base.new
+  def self.new(apikey)
+    BadFruit::Base.new(apikey)
   end
 end

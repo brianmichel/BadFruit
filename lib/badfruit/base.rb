@@ -1,15 +1,19 @@
 module BadFruit
   class Base
-    API_KEY = "ccmmqnfen7s4prbjqw348zxc"
+    attr_accessor :api_key
     API_VERSION = "v1.0"
-    BASE_API_URL = "http://api.rottentomatoes.com/api/public/#{API_VERSION}"
-    MOVIES_URL = "#{BASE_API_URL}/movies.json?apikey=#{API_KEY}"
-    LISTS_URL = "#{BASE_API_URL}/lists.json?apikey=#{API_KEY}"
-
+    
     def movies(); @movie || BadFruit::Movies.new(self); end
     
+    def initialize(key)
+      @api_key = key
+      @@base_api_url = "http://api.rottentomatoes.com/api/public/#{API_VERSION}"
+      @@movies_url = "#{@@base_api_url}/movies.json?apikey=#{@api_key}"
+      @@lists_url = "#{@@base_api_url}/lists.json?apikey=#{@api_key}"
+    end
+    
     def get_movie_action(action)
-      url = "#{MOVIES_URL}#{action}"
+      url = "#{@@movies_url}#{action}"
       return get(url)
     end
     
