@@ -1,0 +1,6 @@
+Manifest
+Rakefile
+lib/badfruit.rb
+lib/badfruit/base.rb
+lib/badfruit/lists.rb
+lib/badfruit/movies.rb
