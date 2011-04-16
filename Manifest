@@ -1,6 +1,7 @@
 Manifest
 Rakefile
 lib/badfruit.rb
+lib/badfruit/Movies/movie.rb
+lib/badfruit/Movies/movies.rb
 lib/badfruit/base.rb
 lib/badfruit/lists.rb
-lib/badfruit/movies.rb

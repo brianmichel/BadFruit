@@ -4,7 +4,8 @@ require 'cgi'
 
 require File.join(File.expand_path(File.dirname(__FILE__) + '/badfruit/base'))
 require File.join(File.expand_path(File.dirname(__FILE__) + '/badfruit/lists'))
-require File.join(File.expand_path(File.dirname(__FILE__) + '/badfruit/movies'))
+require File.join(File.expand_path(File.dirname(__FILE__) + '/badfruit/Movies/movies'))
+require File.join(File.expand_path(File.dirname(__FILE__) + '/badfruit/Movies/movie'))
 
 module BadFruit
   VERSION = "0.0.1"
