@@ -20,7 +20,12 @@ class Movie
   end
   
   def reviews
-    return JSON.parse(@badfruit.get_movie_info(@id, "reviews"))
+    data = JSON.parse(@badfruit.get_movie_info(@id, "reviews"))
+    reviews = Array.new
+    data["reviews"].each do |review|
+      reviews.push(Review.new(review))
+    end
+     return reviews 
   end
   
   def info
