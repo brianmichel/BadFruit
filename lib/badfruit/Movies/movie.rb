@@ -16,7 +16,12 @@ class Movie
   # for the three following methods, pass in your BadFruit client instance to retreive the info
   # this will be fixed when all results are parsed into movie assets for the user
   def fullCast
-    return JSON.parse(@badfruit.get_movie_info(@id, "cast"))
+    data = JSON.parse(@badfruit.get_movie_info(@id, "cast"))
+    actors = Array.new
+    data["cast"].each do |actor|
+      actors.push(Actor.new(actor))
+    end
+    return actors
   end
   
   def reviews
