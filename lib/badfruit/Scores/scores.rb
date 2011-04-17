@@ -6,6 +6,6 @@ class Scores
   end
   
   def average
-    return ((@critics_score + @audience_score) / 2)
+    return ((@critics_score + @audience_score) / 2) #ultimate math skillz.
   end
 end

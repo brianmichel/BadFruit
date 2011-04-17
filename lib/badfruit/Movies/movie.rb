@@ -6,21 +6,17 @@ module BadFruit
       @id = movieHash["id"]
       @name = movieHash["title"]
       @cast = movieHash["abridged_cast"]
-      @scores = Scores.new(movieHash["ratings"])
-      @posters = Posters.new(movieHash["posters"])
+      @scores = Scores.new(movieHash["ratings"]) #single score object containing two scores
+      @posters = Posters.new(movieHash["posters"]) #single posters object containing four poster urls
       @badfruit = badfruit
     end
+    
+    #returns an array of Actor objects
+    def full_cast
+      return @badfruit.parse_actors_array(JSON.parse(@badfruit.get_movie_info(@id, "cast")))
+    end
 
-    def averageScores
-      puts "average!"
-    end
-  
-    # for the three following methods, pass in your BadFruit client instance to retreive the info
-    # this will be fixed when all results are parsed into movie assets for the user
-    def fullCast
-      return @badfruit.parseActorsArray(JSON.parse(@badfruit.get_movie_info(@id, "cast")))
-    end
-  
+    #returns an array of Review objects
     def reviews
       data = JSON.parse(@badfruit.get_movie_info(@id, "reviews"))
       reviews = Array.new

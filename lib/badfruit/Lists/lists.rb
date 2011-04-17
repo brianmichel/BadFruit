@@ -4,20 +4,20 @@ module BadFruit
       @badfruit = badfruit
     end
 
-    def openingMovies
-      return @badfruit.parseMoviesArray(JSON.parse(@badfruit.get_lists_action("opening")))
+    def opening_movies
+      return @badfruit.parse_movies_array(JSON.parse(@badfruit.get_lists_action("opening")))
     end
     
-    def upcomingMovies
-      return @badfruit.parseMoviesArray(JSON.parse(@badfruit.get_lists_action("upcoming")))
+    def upcoming_movies
+      return @badfruit.parse_movies_array(JSON.parse(@badfruit.get_lists_action("upcoming")))
     end
     
-    def inTheaters
-      return @badfruit.parseMoviesArray(JSON.parse(@badfruit.get_lists_action("in_theaters")))
+    def in_theaters
+      return @badfruit.parse_movies_array(JSON.parse(@badfruit.get_lists_action("in_theaters")))
     end
     
-    def newDVDReleases
-      return @badfruit.parseMoviesArray(JSON.parse(@badfruit.get_lists_action("new_releases")))
+    def new_dvd_releases
+      return @badfruit.parse_movies_array(JSON.parse(@badfruit.get_lists_action("new_releases")))
     end
   end
 end
