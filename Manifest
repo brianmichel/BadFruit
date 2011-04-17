@@ -3,8 +3,8 @@ README.md
 Rakefile
 lib/badfruit.rb
 lib/badfruit/Actors/actor.rb
+lib/badfruit/Lists/lists.rb
 lib/badfruit/Movies/movie.rb
 lib/badfruit/Movies/movies.rb
 lib/badfruit/Reviews/review.rb
 lib/badfruit/base.rb
-lib/badfruit/lists.rb

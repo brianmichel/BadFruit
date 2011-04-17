@@ -6,6 +6,7 @@ module BadFruit
     LISTS_DETAIL_BASE_URL = "http://api.rottentomatoes.com/api/public/#{API_VERSION}/lists"
     
     def movies(); @movie || BadFruit::Movies.new(self); end
+    def lists(); @list || BadFruit::Lists.new(self); end
     
     def initialize(key)
       @api_key = key
@@ -36,6 +37,21 @@ module BadFruit
     end
 
     def get_lists_action(action)
+      url = nil
+      case action
+      when "new_releases"
+        url = "#{LISTS_DETAIL_BASE_URL}/dvds/new_releases.json?apikey=#{@api_key}"
+      when "opening"
+        url = "#{LISTS_DETAIL_BASE_URL}/movies/opening.json?apikey=#{@api_key}"
+      when "upcoming"
+        url = "#{LISTS_DETAIL_BASE_URL}/movies/upcoming.json?apikey=#{@api_key}"
+      when "in_theaters"
+        url = "#{LISTS_DETAIL_BASE_URL}/movies/in_theaters.json?apikey=#{@api_key}"
+      else
+        puts "Not a valid action"
+        return
+      end
+      return get(url)
     end
 
     def get(url)
@@ -47,6 +63,14 @@ module BadFruit
         puts "Response: OK"
         return resp.body
       end
+    end
+
+    def parseMoviesArray(hash)
+      moviesArray = Array.new
+       hash["movies"].each do |movie|
+          moviesArray.push(Movie.new(movie, self))
+        end
+        return moviesArray
     end
   end
 end
