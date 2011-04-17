@@ -7,12 +7,12 @@ Usage
 -----
 
 So there are two main parts of the api, movies and lists. Each of these parts return movie objects, but they are in different contexts. For example. (bf is a BadFruit client instance).
-  >bf.lists.newDVDReleases
+> bf.lists.newDVDReleases
 
 Will return you an array of movie objects that represent that latest dvd releases. From this array you can execute actions on the individual movies themselves like...
-  >movies = bf.lists.newDVDReleases
-	 movies[0].fullCast 
-	 movies[0].reviews
+> movies = bf.lists.newDVDReleases
+movies[0].fullCast 
+movies[0].reviews
 
 Very similar to the actual movie section of the api which I've included an example below...
 
