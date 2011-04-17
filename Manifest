@@ -1,4 +1,5 @@
 Manifest
+README.md
 Rakefile
 lib/badfruit.rb
 lib/badfruit/Actors/actor.rb
