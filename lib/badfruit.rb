@@ -10,8 +10,6 @@ require File.join(File.expand_path(File.dirname(__FILE__)), 'badfruit', 'Reviews
 require File.join(File.expand_path(File.dirname(__FILE__)), 'badfruit', 'Actors', 'actor')
 
 module BadFruit
-  VERSION = "0.0.1"
-  
   def self.new(apikey)
     BadFruit::Base.new(apikey)
   end
