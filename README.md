@@ -35,4 +35,4 @@ This should get you started, I should also mention that there are probably more 
 
 Version
 --------
- The current version of the gem is 0.0.3, I could probably bump it to a 1.0 but..umm, well...who cares.
+ The current version of the gem is 0.0.4, I could probably bump it to a 1.0 but..umm, well...who cares.

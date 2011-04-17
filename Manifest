@@ -9,4 +9,5 @@ lib/badfruit/Movies/movie.rb
 lib/badfruit/Movies/movies.rb
 lib/badfruit/Posters/posters.rb
 lib/badfruit/Reviews/review.rb
+lib/badfruit/Scores/scores.rb
 lib/badfruit/base.rb

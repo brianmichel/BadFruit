@@ -65,12 +65,21 @@ module BadFruit
       end
     end
 
+    #Utility Methods For Parsing
     def parseMoviesArray(hash)
       moviesArray = Array.new
        hash["movies"].each do |movie|
           moviesArray.push(Movie.new(movie, self))
         end
         return moviesArray
+    end
+
+    def parseActorsArray(hash)
+      actorsArray = Array.new
+       hash["cast"].each do |actor|
+         actorsArray.push(Actor.new(actor))
+       end
+       return actorsArray
     end
   end
 end
