@@ -3,6 +3,13 @@ BadFruit Client For Rotten Tomatoes
 
 This is a rough gem to interface with the Rotten Tomatoes API.
 
+Prerequisites
+-------------
+
+	>gem install badfruit
+
+YOU ARE NOW READY TO GET SOME SWEET MOVIE DATA!
+
 Usage
 -----
 
