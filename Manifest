@@ -2,6 +2,7 @@ LICENSE
 Manifest
 README.md
 Rakefile
+badfruit.gemspec
 lib/badfruit.rb
 lib/badfruit/Actors/actor.rb
 lib/badfruit/Lists/lists.rb
