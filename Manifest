@@ -1,3 +1,4 @@
+LICENSE
 Manifest
 README.md
 Rakefile
@@ -6,5 +7,6 @@ lib/badfruit/Actors/actor.rb
 lib/badfruit/Lists/lists.rb
 lib/badfruit/Movies/movie.rb
 lib/badfruit/Movies/movies.rb
+lib/badfruit/Posters/posters.rb
 lib/badfruit/Reviews/review.rb
 lib/badfruit/base.rb
