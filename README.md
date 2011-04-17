@@ -31,7 +31,7 @@ Very similar to the actual movie section of the api which I've included an examp
 	 cast = movies[0].fullCast
 	 reviews = movies[0].reviews
 
-This should get you started, I should also mention that the Lists part of the API has not yet been implemented in this gem. I'll take a look at it soon though.
+This should get you started, I should also mention that there are probably more tweaks needed to the list part of the api, but it should work for most people. Feel free to contact me or open an issue if need be.
 
 Version
 --------
