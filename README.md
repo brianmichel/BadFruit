@@ -33,6 +33,8 @@ Very similar to the actual movie section of the api which I've included an examp
 
 This should get you started, I should also mention that there are probably more tweaks needed to the list part of the api, but it should work for most people. Feel free to contact me or open an issue if need be.
 
+PLEASE NOTE: You will need to add replace the "API_KEY_HERE" text with your key to make the tests pass.
+
 Version
 --------
  The current version of the gem is 0.0.5, I could probably bump it to a 1.0 but..umm, well...who cares.
