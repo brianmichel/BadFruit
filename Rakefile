@@ -7,6 +7,7 @@ Echoe.new('badfruit', '0.0.5') do |p|
   p.url             = "http://www.github.com/brianmichel/badfruit"
   p.author          = "Brian Michel"
   p.email           = "brian.michel@gmail.com"
+  p.development_dependencies = ["cucumber"]
   p.runtime_dependencies = ["json", "httparty"]
 end
 

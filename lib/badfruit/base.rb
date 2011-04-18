@@ -56,11 +56,9 @@ module BadFruit
 
     def get(url)
       data = nil
-      puts "Getting #{url}"
       resp = HTTParty.get(url)
 
       if resp.code == 200
-        puts "Response: OK"
         return resp.body
       end
     end
