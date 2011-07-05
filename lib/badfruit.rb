@@ -1,5 +1,5 @@
 require 'httparty'
-require 'JSON'
+require 'json'
 require 'cgi'
 
 require File.join(File.expand_path(File.dirname(__FILE__)), 'badfruit', 'base')
