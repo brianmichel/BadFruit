@@ -13,5 +13,12 @@ module BadFruit
       end
       return @badfruit.parse_movies_array(JSON.parse(@badfruit.search_movies(name, page_limit, page)))
     end
+
+    # search by id
+    def search_by_id(movie_id)
+      movie = @badfruit.get_movie_info(movie_id, "main")
+      raise 'Movie not found' if movie.blank?
+      @badfruit.parse_movie_array(JSON.parse(movie))
+    end
   end
 end

@@ -29,6 +29,8 @@ module BadFruit
         url = "#{MOVIE_DETAIL_BASE_URL}/#{movie_id}/reviews.json?apikey=#{@api_key}"
       when "cast"
         url = "#{MOVIE_DETAIL_BASE_URL}/#{movie_id}/cast.json?apikey=#{@api_key}"
+      when "main"
+        url = "#{MOVIE_DETAIL_BASE_URL}/#{movie_id}.json?apikey=#{@api_key}"
       else
         puts "Not a valid action"
         return
@@ -70,6 +72,10 @@ module BadFruit
           moviesArray.push(Movie.new(movie, self))
         end
         return moviesArray
+    end
+
+    def parse_movie_array(hash)
+      Movie.new(hash, self)
     end
 
     def parse_actors_array(hash)
