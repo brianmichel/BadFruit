@@ -3,6 +3,10 @@ Manifest
 README.md
 Rakefile
 badfruit.gemspec
+features/client_creation.feature
+features/client_query.feature
+features/client_reviews.feature
+features/step_definitions/step_definitions.rb
 lib/badfruit.rb
 lib/badfruit/Actors/actor.rb
 lib/badfruit/Lists/lists.rb
