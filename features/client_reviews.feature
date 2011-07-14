@@ -13,3 +13,13 @@ Feature: Reviews
 		| api_key 			 |      movie_name      |
 		| "API_KEY_HERE" |       "Hackers"      |
 		| "API_KEY_HERE" | "Gone With the Wind" |
+
+	Scenario Outline: Get Information For Specific Movie by id
+		Given I make a new client with <api_key>
+		And I query the API for <movie_id>
+		And I fetch the info for <movie_id>
+		Then the results should contain movie info
+	
+	Examples:
+		| api_key 			 |      movie_id      |
+		| "API_KEY_HERE" |       770671942      |
