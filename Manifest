@@ -2,7 +2,6 @@ LICENSE
 Manifest
 README.md
 Rakefile
-badfruit.gemspec
 features/client_creation.feature
 features/client_query.feature
 features/client_reviews.feature

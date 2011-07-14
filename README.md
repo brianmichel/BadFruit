@@ -6,7 +6,7 @@ This is a rough gem to interface with the Rotten Tomatoes API.
 Prerequisites
 -------------
 
-	>gem install badfruit
+	gem install badfruit
 
 YOU ARE NOW READY TO GET SOME SWEET MOVIE DATA!
 
@@ -19,7 +19,7 @@ So there are two main parts of the api, movies and lists. Each of these parts re
 
 Will return you an array of movie objects that represent that latest dvd releases. From this array you can execute actions on the individual movies themselves like...
 
-    movies = bf.lists.new_dvd_releases
+	 movies = bf.lists.new_dvd_releases
 	 movies[0].full_cast 
 	 movies[0].reviews
 
@@ -37,4 +37,9 @@ PLEASE NOTE: You will need to add replace the "API_KEY_HERE" text with your key 
 
 Version
 --------
- The current version of the gem is 0.0.5, I could probably bump it to a 1.0 but..umm, well...who cares.
+ The current version of the gem is 1.1.0, if you'd like to add anything feel free to submit a patch!
+
+Thanks
+------
+
+Thanks to Tagrudev for the search by id feature!
