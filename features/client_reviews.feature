@@ -13,7 +13,7 @@ Feature: Reviews
 		| api_key 			 |      movie_name      |
 		| "API_KEY_HERE" |       "Hackers"      |
 		| "API_KEY_HERE" | "Gone With the Wind" |
-
+    
 	Scenario Outline: Get Information For Specific Movie by id
 		Given I make a new client with <api_key>
 		And I query the API for <movie_id>
@@ -23,3 +23,13 @@ Feature: Reviews
 	Examples:
 		| api_key 			 |      movie_id      |
 		| "API_KEY_HERE" |       770671942      |
+
+	Scenario Outline: Get Similar movies by id
+		Given I make a new client with <api_key>
+		And I query the API for <similar_movie_id>
+		And I fetch the similar movies for <similar_movie_id>
+		Then the results should contain similar movies
+	
+	Examples:
+		| api_key 			 |      similar_movie_id      |
+		| "API_KEY_HERE" |       326459204      |

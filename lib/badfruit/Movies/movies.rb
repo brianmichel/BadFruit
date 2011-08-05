@@ -20,5 +20,11 @@ module BadFruit
       raise 'Movie not found' if movie.blank?
       @badfruit.parse_movie_array(JSON.parse(movie))
     end
+
+    # similar movie
+    def similar_movies(movie_id)
+      return @badfruit.parse_movies_array(JSON.parse(@badfruit.similar_movies(movie_id)))
+    end
+
   end
 end
