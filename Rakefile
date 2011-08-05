@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-Echoe.new('badfruit', '1.1.0') do |p|
+Echoe.new('badfruit', '1.1.1') do |p|
   p.description     = "Interface with the Rotten Tomatoes API"
   p.url             = "http://www.github.com/brianmichel/badfruit"
   p.author          = "Brian Michel"

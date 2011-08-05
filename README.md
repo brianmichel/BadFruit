@@ -37,7 +37,7 @@ PLEASE NOTE: You will need to add replace the "API_KEY_HERE" text with your key 
 
 Version
 --------
- The current version of the gem is 1.1.0, if you'd like to add anything feel free to submit a patch!
+ The current version of the gem is 1.1.1, if you'd like to add anything feel free to submit a patch!
 
 Thanks
 ------
