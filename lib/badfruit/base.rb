@@ -19,7 +19,12 @@ module BadFruit
       url = "#{@@movies_query_url}&q=#{CGI::escape(name)}&page_limit=#{page_limit}&page=#{page}"
       return get(url)
     end
-    
+
+    def similar_movies(movie_id)
+      url = "#{MOVIE_DETAIL_BASE_URL}/#{CGI::escape(movie_id)}/similar.json?apikey=#{@api_key}"
+      return get(url)
+    end   
+ 
     def get_movie_info(movie_id, action)
       url = nil
       case action
@@ -49,6 +54,8 @@ module BadFruit
         url = "#{LISTS_DETAIL_BASE_URL}/movies/upcoming.json?apikey=#{@api_key}"
       when "in_theaters"
         url = "#{LISTS_DETAIL_BASE_URL}/movies/in_theaters.json?apikey=#{@api_key}"
+      when "current_releases"
+        url = "#{LISTS_DETAIL_BASE_URL}/dvds/current_releases.json?apikey=#{@api_key}"
       else
         puts "Not a valid action"
         return

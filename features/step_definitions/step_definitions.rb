@@ -17,6 +17,9 @@ end
 Given /I fetch the reviews for "([^"]*)"$/ do |movie_name|
   @reviews = @movies[0].reviews
 end
+Given /^I fetch the similar movies for (\d+)$/ do |similar_movie_id|
+  @similar_movies = @badfruit.similar_movies(similar_movie_id)
+end
 
 Given /^I fetch the info for (\d+)$/ do |movie_id|
   @info = @movie.info
@@ -31,6 +34,9 @@ Then /the results should contain the "([^"]*)"$/ do |movie_name|
   movie_to_test = @movies[0]
   should_be_true = movie_to_test.name.include? "#{movie_name}"
   should_be_true.should == true
+end
+Then /^the results should contain similar movies$/ do
+  @similar_movies.should_not == nil
 end
 
 Then /the results should contain reviews/ do
