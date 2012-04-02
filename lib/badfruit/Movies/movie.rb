@@ -18,6 +18,7 @@ module BadFruit
       @scores = Scores.new(movieHash["ratings"]) #single score object containing two scores
       @posters = Posters.new(movieHash["posters"]) #single posters object containing four poster urls
       @badfruit = badfruit
+      @moviehash = movieHash
     end
     
     #returns an array of Actor objects
@@ -36,7 +37,7 @@ module BadFruit
     end
   
     def info
-      return JSON.parse(@badfruit.get_movie_info(@id, "details"))
+      @moviehash
     end
   end
 end
