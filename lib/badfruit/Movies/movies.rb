@@ -17,7 +17,7 @@ module BadFruit
     # search by id
     def search_by_id(movie_id)
       movie = @badfruit.get_movie_info(movie_id, "main")
-      raise 'Movie not found' if movie.blank?
+      raise 'Movie not found' if movie.nil? || movie.empty?
       @badfruit.parse_movie_array(JSON.parse(movie))
     end
 
