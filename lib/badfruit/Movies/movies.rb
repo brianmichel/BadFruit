@@ -21,6 +21,13 @@ module BadFruit
       @badfruit.parse_movie_array(JSON.parse(movie))
     end
 
+    # search by alias (currently only IMDB is supported)
+    def search_by_alias(alias_id,type='imdb')
+      movie = @badfruit.get_movie_alias_info(alias_id, type)
+      raise 'Movie not found' if movie.nil? || movie.empty?
+      @badfruit.parse_movie_array(JSON.parse(movie))
+    end
+
     # similar movie
     def similar_movies(movie_id)
       return @badfruit.parse_movies_array(JSON.parse(@badfruit.similar_movies(movie_id)))
