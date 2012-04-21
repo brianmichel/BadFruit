@@ -2,8 +2,9 @@ module BadFruit
   class Base
     attr_accessor :api_key
     API_VERSION = "v1.0"
-    MOVIE_DETAIL_BASE_URL = "http://api.rottentomatoes.com/api/public/#{API_VERSION}/movies"
-    LISTS_DETAIL_BASE_URL = "http://api.rottentomatoes.com/api/public/#{API_VERSION}/lists"
+    API_BASE_URL = "http://api.rottentomatoes.com/api/public/#{API_VERSION}"
+    MOVIE_DETAIL_BASE_URL = "#{API_BASE_URL}/movies"
+    LISTS_DETAIL_BASE_URL = "#{API_BASE_URL}/lists"
     
     def movies(); @movie || BadFruit::Movies.new(self); end
     def lists(); @list || BadFruit::Lists.new(self); end
@@ -40,6 +41,11 @@ module BadFruit
         puts "Not a valid action"
         return
       end
+      return get(url)
+    end
+
+    def get_movie_alias_info(alias_id, type)
+      url = "#{API_BASE_URL}/movie_alias.json?id=#{CGI::escape(alias_id)}&type=#{CGI::escape(type)}&apikey=#{@api_key}"
       return get(url)
     end
 
