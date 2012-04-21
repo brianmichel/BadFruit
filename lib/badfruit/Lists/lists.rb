@@ -23,5 +23,9 @@ module BadFruit
     def current_dvd_releases
       return @badfruit.parse_movies_array(JSON.parse(@badfruit.get_lists_action("current_releases")))
     end
+    
+    def upcoming_dvd_releases
+      return @badfruit.parse_movies_array(JSON.parse(@badfruit.get_lists_action("upcoming_dvds")))
+    end
   end
 end
