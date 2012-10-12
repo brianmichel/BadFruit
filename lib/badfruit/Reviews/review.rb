@@ -1,6 +1,6 @@
 module BadFruit
   class Review
-    attr_accessor :critic, :date, :publication, :quote, :links
+    attr_accessor :critic, :date, :publication, :quote, :links, :freshness
 
     def initialize(reviewHash)
       @critic = reviewHash["critic"]
@@ -8,6 +8,7 @@ module BadFruit
       @publication = reviewHash["publication"]
       @quote = reviewHash["quote"]
       @links = reviewHash["links"]
+      @freshness = reviewHash["freshness"]
     end
   end
 end
