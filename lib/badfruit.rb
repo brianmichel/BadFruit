@@ -10,6 +10,7 @@ require File.join(File.expand_path(File.dirname(__FILE__)), 'badfruit', 'Actors'
 require File.join(File.expand_path(File.dirname(__FILE__)), 'badfruit', 'Lists', 'lists')
 require File.join(File.expand_path(File.dirname(__FILE__)), 'badfruit', 'Posters', 'posters')
 require File.join(File.expand_path(File.dirname(__FILE__)), 'badfruit', 'Scores', 'scores')
+require File.join(File.expand_path(File.dirname(__FILE__)), 'badfruit', 'Directors', 'director')
 
 module BadFruit
   def self.new(apikey)
