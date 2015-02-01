@@ -1,4 +1,5 @@
-class Scores
+module BadFruit
+  class Scores
   attr_reader :critics_score, :audience_score
   def initialize(scoreHash)
     @critics_score = scoreHash["critics_score"]
@@ -7,5 +8,6 @@ class Scores
   
   def average
     return ((@critics_score + @audience_score) / 2) #ultimate math skillz.
+  end
   end
 end
