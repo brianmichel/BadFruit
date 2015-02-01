@@ -64,6 +64,8 @@ module BadFruit
         url = "#{LISTS_DETAIL_BASE_URL}/dvds/current_releases.json?apikey=#{@api_key}"
       when "upcoming_dvds"
         url = "#{LISTS_DETAIL_BASE_URL}/dvds/upcoming.json?apikey=#{@api_key}"
+      when "top_rentals"
+        url = "#{LISTS_DETAIL_BASE_URL}/dvds/top_rentals.json?apikey=#{@api_key}"
       else
         puts "Not a valid action"
         return
