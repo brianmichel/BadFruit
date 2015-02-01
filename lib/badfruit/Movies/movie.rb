@@ -26,6 +26,16 @@ module BadFruit
       return @badfruit.parse_actors_array(JSON.parse(@badfruit.get_movie_info(@id, "cast")))
     end
 
+    # Returns directors
+    def director
+      director_hashes = JSON.parse(@badfruit.get_movie_info(@id, "details"))["abridged_directors"]
+      directors = []
+      if !director_hashes.empty?
+        director_hashes.map{ |h| directors.push(Director.new(h))}  
+      end
+      return directors
+    end
+
     #returns an array of Review objects
     def reviews
       data = JSON.parse(@badfruit.get_movie_info(@id, "reviews"))
