@@ -26,9 +26,14 @@ module BadFruit
       return @badfruit.parse_actors_array(JSON.parse(@badfruit.get_movie_info(@id, "cast")))
     end
 
-    # Returns director, since RottenTomatoes API is broken (abridged_director doesn't show up in search_by_name results for movies.)
+    # Returns directors
     def director
-      return Director.new(JSON.parse(@badfruit.get_movie_info(@id, "details"))["abridged_directors"][0])
+      director_hashes = JSON.parse(@badfruit.get_movie_info(@id, "details"))["abridged_directors"]
+      directors = []
+      if !director_hashes.empty?
+        director_hashes.map{ |h| directors.push(Director.new(h))}  
+      end
+      return directors
     end
 
     #returns an array of Review objects
